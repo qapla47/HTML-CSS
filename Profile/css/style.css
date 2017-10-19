@@ -1,0 +1,250 @@
+body{
+  font: 15px/1.5 'Century Gothic', Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* global */
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {
+  height: 20%;
+  background: #90d9e0;
+  border: 0;
+  padding:: 4%;
+
+  color: #ffffff;
+}
+
+.dark {
+  padding: 8%;
+  background: #222;
+  color: #ffffff;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+/* header */
+header{
+  background: #222;
+  text-shadow: 0px 1px 5px #000;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #90d9e0 3px solid;
+  
+}
+
+header a{
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px; /*top right bottom left */
+}
+
+header #branding{
+  float: left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float: right;
+  margin-top: 15px;
+}
+
+header .highlight, header .current a{
+  color: #90d9e0;
+  /* font-weight: bold; */
+}
+
+header a:hover{
+  color: #fff; text-shadow: 0px 0px 4px #000; background-color: #333;
+}
+
+/* showcase */
+#showcase{
+  min-height: 25%;
+  background-image:url('../img/showcase.jpg');
+  background-position: center 80%;
+  background-repeat: no-repeat;
+  background-size: cover /*0 */;
+  text-align: left;
+  color: #ffffff;
+}
+
+#showcase h1{
+  margin-top: 5%;
+  font-size: 180%;
+  margin-block-end: 2%;
+  text-align: right;
+}
+
+#showcase p{
+  float: right;
+  width: 50%;
+}
+
+/* newsletter */
+#newsletter{
+  padding: .5%;
+  color: #ffffff;
+  background: #222;
+}
+
+#newsletter h1{
+  float: left;
+}
+
+#newsletter form{
+  margin-top: 2%;
+  float: right;
+}
+
+#newsletter input[type="email"]{
+  padding: 4%;
+  height: 2%;
+  width: 80%;
+}
+
+/* boxes */
+#boxes{
+  margin-top: 4%;
+}
+
+#boxes .box{
+  float: left;
+  width: 28%;
+  padding: 2%;
+  text-align: center;
+}
+
+#boxes .box img{
+  width: 30%;
+}
+
+/* sidebar */
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+aside#sidebar .contact-us input, aside#sidebar .contact-us textarea{
+  width: 90%;
+  padding: 5px;
+}
+
+/* main-col */
+article#main-col {
+  float: left;
+  width: 65%
+}
+
+/* learning */
+ul#learning li{
+  list-style: none;
+  padding: 20px;
+  border: rgba(85, 85, 85, 0.61) solid 1px;
+  margin-bottom: 4%;
+  background: rgba(200, 200, 200, 0.15);
+}
+
+footer {
+  padding: 20px;
+  margin-top: 4%;
+  color: #ffffff;
+  background-color: #222;
+  text-align: center;
+}
+
+/* imageSlider */
+
+div#slider figure:hover { animation-play-state:paused; }
+
+@keyframes slidy {
+   0% { left: 0%; }  /*image 1 */
+   10% { left: 0%; }/*image 1 */
+  20% { left: -100%; } /*image 2 */
+  30% { left: -100%; } /*image 2 */
+  40% { left: -200%; } /*image 3 */
+  50% { left: -200%; } /*image 3 */
+  60% { left: -300%; } /*image 4 */
+  70% { left: -300%; } /*image 4 */
+  80% { left: -400%; } /*image 5 */
+  90% { left: -400%; } /*image 5*/
+  100% { left: -500%; }/*image 6=1 */
+  }
+  
+  body { margin: 0 ; } 
+  div#slider { 
+    overflow: hidden;
+    width: 50%;
+    max-width: 1000px;
+  }
+  div#slider figure img { 
+    width: 16.66%; 
+    height: auto; 
+    float: center; 
+  }
+  div#slider figure { 
+    position: relative;
+    width: 600%;
+    margin: 0 ;
+    right: 0;
+    text-align: center;
+    font-size: 0;
+    animation: 30s slidy infinite; 
+  }
+  
+
+/* media queries */
+@media(max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form, 
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  header {
+    padding-bottom: 20px;
+  }
+
+  #showcase h1 {
+    margin-top: 40px;
+  }
+
+  #newsletter button, .contact-us button {
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"], .contact-us input, .contact-us textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
